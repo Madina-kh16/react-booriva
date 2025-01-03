@@ -1,4 +1,4 @@
-import HeaderMapLogo from "../../../../../../assets/img/icons/headerMapLogo";
+import HeaderMapLogo from "../../../../../assets/img/icons/headerMapLogo";
 
 import styles from "./headerAdress.module.sass";
 

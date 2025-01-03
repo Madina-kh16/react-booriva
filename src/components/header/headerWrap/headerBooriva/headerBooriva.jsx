@@ -1,4 +1,4 @@
-import HeaderBoorivaLogo from "../../../../../assets/img/icons/headerBoorivaLogo";
+import HeaderBoorivaLogo from "../../../../assets/img/icons/headerBoorivaLogo";
 
 import styles from "./headerBooriva.module.sass";
 

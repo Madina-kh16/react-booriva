@@ -1,4 +1,4 @@
-import HeaderHeartLogo from "../../../../../../assets/img/icons/headerHeartLogo";
+import HeaderHeartLogo from "../../../../../assets/img/icons/headerHeartLogo";
 
 const HeaderHeart = () => {
   return (

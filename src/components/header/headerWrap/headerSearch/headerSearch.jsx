@@ -1,4 +1,4 @@
-import HeaderSearchLogo from "../../../../../assets/img/icons/headerSearchLogo";
+import HeaderSearchLogo from "../../../../assets/img/icons/headerSearchLogo";
 
 import styles from "./headerSearch.module.sass";
 

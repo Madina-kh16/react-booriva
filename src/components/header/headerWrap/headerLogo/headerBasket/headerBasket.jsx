@@ -1,4 +1,4 @@
-import HeaderBascetLogo from "../../../../../../assets/img/icons/headerBascetLogo";
+import HeaderBascetLogo from "../../../../../assets/img/icons/headerBascetLogo";
 
 const HeaderBasket = () => {
   return (

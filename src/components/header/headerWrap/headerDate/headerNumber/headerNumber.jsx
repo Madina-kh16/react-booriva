@@ -1,5 +1,5 @@
-import HeaderBoorivaLogo from "../../../../../../assets/img/icons/headerBoorivaLogo";
-import HeaderPhoneLogo from "../../../../../../assets/img/icons/headerPhoneLogo";
+import HeaderBoorivaLogo from "../../../../../assets/img/icons/headerBoorivaLogo";
+import HeaderPhoneLogo from "../../../../../assets/img/icons/headerPhoneLogo";
 
 import styles from "./headerNumber.module.sass";
 
