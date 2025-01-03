@@ -6,7 +6,7 @@ import styles from "./header.module.sass";
 const Header = () => {
   return (
     <div className={styles.header}>
-      <div className={styles.header__wrapper}>
+      <div className={styles.headerWrapper}>
         <HeaderWrap />
         <Menu />
       </div>
