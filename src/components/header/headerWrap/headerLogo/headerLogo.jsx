@@ -1,7 +1,7 @@
-import HeaderBasket from "./headerBasket/headerBasket";
-import HeaderHeart from "./headerHeart/headerHeart";
+import HeaderBasket from "./headerBasket/HeaderBasket";
+import HeaderHeart from "./headerHeart/HeaderHeart";
 
-import styles from "./headerLogo.module.sass";
+import styles from "./HeaderLogo.module.sass";
 
 const HeaderLogo = () => {
   return (

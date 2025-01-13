@@ -1,0 +1,32 @@
+body
+    margin: 0
+
+.wrapper
+    max-width: 1140px
+    margin: 0 auto
+
+img
+    width: inherit
+    height: inherit
+    margin: 0
+    border-radius: inherit
+
+.instagramMain
+    padding: 40px 0
+    @media (max-width: 1190px)
+        padding: 40px
+        @media (max-width: 960px)
+            padding: 40px 16px
+            @media (max-width: 870px)
+                padding: 40px 12px
+                @media (max-width: 480px)
+                    padding-top: 21px
+                    @media (max-width: 370px)
+                        padding: 60px 12px
+    &Wrap
+        display: flex
+        gap: 6px
+        justify-content: space-between
+        align-items: flex-end
+        @media (max-width: 870px)
+            align-items: inherit

@@ -1,6 +1,6 @@
 import HeaderSearchLogo from "../../../../assets/img/icons/headerSearchLogo";
 
-import styles from "./headerSearch.module.sass";
+import styles from "./HeaderSearch.module.sass";
 
 const HeaderSearch = () => {
   return (

@@ -1,5 +1,5 @@
-import HeaderWrap from "./headerWrap/headerWrap";
-import Menu from "./menu/menu";
+import HeaderWrap from "./headerWrap/HeaderWrap";
+import Menu from "./menu/Menu";
 
 import styles from "./header.module.sass";
 

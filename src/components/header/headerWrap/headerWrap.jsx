@@ -1,9 +1,9 @@
-import HeaderBooriva from "./headerBooriva/headerBooriva";
-import HeaderSearch from "./headerSearch/headerSearch";
-import HeaderLogo from "./headerLogo/headerLogo";
-import HeaderDate from "./headerDate/headerdate";
+import HeaderBooriva from "./headerBooriva/HeaderBooriva";
+import HeaderSearch from "./headerSearch/HeaderSearch";
+import HeaderLogo from "./headerLogo/HeaderLogo";
+import HeaderDate from "./headerDate/HeaderDate";
 
-import styles from "./headerWrap.module.sass";
+import styles from "./HeaderWrap.module.sass";
 
 const HeaderWrap = () => {
   return (

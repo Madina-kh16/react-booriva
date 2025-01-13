@@ -1,7 +1,7 @@
 import HeaderBoorivaLogo from "../../../../../assets/img/icons/headerBoorivaLogo";
 import HeaderPhoneLogo from "../../../../../assets/img/icons/headerPhoneLogo";
 
-import styles from "./headerNumber.module.sass";
+import styles from "./HeaderNumber.module.sass";
 
 const HeaderNumber = () => {
   return (

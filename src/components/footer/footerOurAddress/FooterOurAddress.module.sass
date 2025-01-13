@@ -1,0 +1,59 @@
+*
+    margin: 0
+    padding: 0
+
+body
+    margin: 0
+    padding: 0
+
+.wrapper
+    max-width: 1140px
+    margin: 0 auto
+
+.footer
+    &Common
+        color: #F40000
+        font-family: "Sunday Best"
+        font-size: 12px
+        font-weight: 400
+        @media (max-width: 768px)
+            display: none
+    &Contacts
+        display: none
+        @media (max-width: 768px)
+            display: block
+            color: #F40000
+            font-family: "Sunday Best"
+            font-size: 12px
+            font-weight: 400
+            @media (max-width: 580px)
+                font-size: 10px
+    &NumberItem
+        display: none
+        @media (max-width: 768px)
+            display: block
+            color: #FFFFFF
+            font-family: Montserrat
+            font-size: 12px
+            margin-bottom: 10px
+    &OurAddress
+        max-width: 164px
+        @media (max-width: 455px)
+            width: 100%
+            @media (max-width: 410px)
+                width: inherit
+            @media (max-width: 335px)
+                max-width: 126px
+                @media (max-width: 300px)
+                    margin-right: 0
+                    margin-left: -25px
+                    max-width: 122px
+    &AddressItems
+        margin-top: 15px
+    &AddressItem
+        color: #FFFFFF
+        font-family: Montserrat
+        font-size: 12px
+        margin-bottom: 10px
+        @media (max-width: 580px)
+            font-size: 10px

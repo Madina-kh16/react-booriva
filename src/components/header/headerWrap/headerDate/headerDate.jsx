@@ -1,7 +1,7 @@
-import HeaderAdress from "./headerAdress/headerAdress";
-import HeaderNumber from "./headerNumber/headerNumber";
+import HeaderAdress from "./headerAdress/HeaderAdress";
+import HeaderNumber from "./headerNumber/HeaderNumber";
 
-import styles from "./headerDate.module.sass";
+import styles from "./HeaderDate.module.sass";
 
 const HeaderDate = () => {
   return (

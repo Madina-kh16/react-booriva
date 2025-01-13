@@ -1,6 +1,6 @@
 import HeaderMapLogo from "../../../../../assets/img/icons/headerMapLogo";
 
-import styles from "./headerAdress.module.sass";
+import styles from "./HeaderAdress.module.sass";
 
 const HeaderAdress = () => {
   return (

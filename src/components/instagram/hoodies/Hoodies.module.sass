@@ -1,0 +1,84 @@
+body
+    margin: 0
+
+.wrapper
+    max-width: 1140px
+    margin: 0 auto
+
+img
+    width: inherit
+    height: inherit
+    margin: 0
+    border-radius: inherit
+
+.instagram
+    &Hoodies
+        max-width: 376px
+        @media (max-width: 1065px)
+            max-width: 272px
+            @media (max-width: 900px)
+                min-width: 205px
+                @media (max-width: 870px)
+                    max-width: 362px
+                    height: 407px
+                    @media (max-width: 720px)
+                        height: inherit
+                        @media (max-width: 510px)
+                            max-width: 192px
+                            height: 200px
+                            min-width: inherit
+                            @media (max-width: 480px)
+                                height: inherit
+                                @media (max-width: 370px)
+                                    max-width: 148px
+                                    height: 170px
+        img
+            width: 100vw
+        &Disp
+            @media (max-width: 870px)
+                max-width: 362px
+                height: 572px
+                display: flex
+                justify-content: space-between
+                flex-direction: column
+                @media (max-width: 870px)
+                    height: 550px
+                    @media (max-width: 720px)
+                        height: inherit
+                        @media (max-width: 510px)
+                            max-width: 192px
+                            gap: 4px
+    &BoorivaGirls
+        &Desc
+            display: none
+            @media (max-width: 870px)
+                display: block
+        &Title
+            font-family: Montserrat
+            font-size: 42px
+            font-weight: 600
+            color: #F40000
+            @media (max-width: 720px)
+                font-size: 34px
+                @media (max-width: 510px)
+                    font-size: 18px
+        &Text
+            max-width: 276px
+            font-family: Montserrat
+            margin-left: auto
+            @media (max-width: 650px)
+                font-size: 12px
+                max-width: 160px
+                @media (max-width: 510px)
+                    max-width: 130px
+                    font-size: 11px
+    &Jacket
+        display: none
+        @media (max-width: 510px)
+            display: block
+            max-width: 192px
+            height: 184px
+            @media (max-width: 370px)
+                display: none
+            img
+                width: 100vw
