@@ -1,0 +1,63 @@
+img
+    display: block
+
+.categoriesRightSmall
+    display: flex
+    justify-content: space-between
+    margin-bottom: 15px
+    gap: 15px
+    @media (max-width: 1000px)
+        margin-bottom: 11px
+        gap: 11px
+        @media (max-width: 768px)
+            margin-bottom: 9px
+            gap: 9px
+    &Dresses
+        max-width: 274px
+        position: relative
+    &PinkDresses
+        position: absolute
+        display: flex
+        bottom: 61px
+        left: 13px
+        align-items: center
+        justify-content: center
+        @media (max-width: 1000px)
+            bottom: 50px
+            right: 0px
+            left: inherit
+            @media (max-width: 768px)
+                max-width: 128px
+                bottom: 60px
+        &Text
+            color: white
+            font-family: Sunday Best
+            position: absolute
+            font-size: 20px
+            font-weight: 400
+            @media (max-width: 768px)
+                font-size: 18px
+    &Suits
+        max-width: 274px
+        position: relative
+    &PinkSuits
+        max-width: 186px
+        position: absolute
+        display: flex
+        bottom: 10px
+        right: 10px
+        align-items: center
+        justify-content: center
+        @media (max-width: 1000px)
+            bottom: 8px
+            right: 5px
+            @media (max-width: 768px)
+                max-width: 142px
+        &Text
+            color: white
+            font-family: Sunday Best
+            position: absolute
+            font-size: 20px
+            font-weight: 400
+            @media (max-width: 768px)
+                font-size: 17px

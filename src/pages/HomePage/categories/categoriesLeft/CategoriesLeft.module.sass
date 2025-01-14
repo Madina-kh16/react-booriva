@@ -1,0 +1,35 @@
+img
+    display: block
+
+.categoriesLeft
+    max-width: 563px
+    &Big
+        position: relative
+        max-width: 563px
+    &Pink
+        max-width: 205px
+        display: flex
+        bottom: 19px
+        left: 22px
+        position: absolute
+        align-items: center
+        justify-content: center
+        @media (max-width: 1000px)
+            bottom: 9px
+            left: 5px
+            @media (max-width: 768px)
+                max-width: 170px
+                bottom: 11px
+                left: 12px
+                // @media (max-width: 480px)
+                //     max-width: 121px
+                //     bottom: 21px
+                //     left: 22px
+        &Text
+            color: white
+            font-family: Sunday Best
+            position: absolute
+            font-size: 20px
+            font-weight: 400
+            @media (max-width: 768px)
+                font-size: 18px

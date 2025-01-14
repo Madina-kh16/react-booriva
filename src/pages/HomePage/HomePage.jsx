@@ -1,9 +1,10 @@
+import HeaderLine from "../../components/header/headerWrap/headerLine/headerLine";
+import Instagram from "../../components/instagram/Instagram";
+import NewCollection from "./newCollection/newCollection";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
-import HeaderLine from "../../components/header/headerWrap/headerLine/headerLine";
-import NewCollection from "./newCollection/newCollection";
 import TopProducts from "./topProducts/TopProducts";
-import Instagram from "../../components/instagram/Instagram";
+import Categories from "./categories/Categories";
 
 import styles from "./homePage.module.sass";
 
@@ -12,6 +13,7 @@ const HomePage = () => {
     <div className={styles.homePage}>
       <Header />
       <HeaderLine />
+      <Categories />
       <NewCollection />
       <TopProducts />
       <Instagram />
