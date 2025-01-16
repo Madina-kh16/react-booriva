@@ -1,7 +1,7 @@
-import shirt from "../../../assets/img/images/boorivaInstagramShirt.png";
-import cloak from "../../../assets/img/images/boorivaInstagramCloak.png";
 import clothes from "../../../assets/img/images/boorivaInstagramClothes.png";
 import jacket from "../../../assets/img/images/boorivaInstagramJacket.png";
+import shirt from "../../../assets/img/images/boorivaInstagramShirt.png";
+import cloak from "../../../assets/img/images/boorivaInstagramCloak.png";
 
 import styles from "./InstagramBlock.module.sass";
 

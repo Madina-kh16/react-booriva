@@ -1,5 +1,5 @@
-import hoodies from "../../../assets/img/images/boorivaInstagramHudi.png";
 import jacket from "../../../assets/img/images/boorivaInstagramJacket.png";
+import hoodies from "../../../assets/img/images/boorivaInstagramHudi.png";
 
 import styles from "./Hoodies.module.sass";
 

@@ -12,10 +12,51 @@ img
         @media (max-width: 768px)
             margin-top: 9px
             gap: 9px
+            @media (max-width: 500px)
+                flex-direction: column
+                margin-top: 0
+                gap: 8px
+                @media (max-width: 350px)
+                    gap: 4px
+    &BottomHight
+        display: none
+        @media (max-width: 500px)
+            display: block
+    &Dresses
+        display: none
+        @media (max-width: 500px)
+            display: block
+            max-width: 170px
+            position: relative
+    &PinkDresses
+        cursor: pointer
+        position: absolute
+        display: flex
+        left: 23px
+        align-items: center
+        justify-content: center
+        max-width: 95px
+        bottom: 48px
+        @media (max-width: 350px)
+            left: 9px
+            max-width: 85px
+            bottom: 14px
+        &Text
+            color: white
+            font-family: Sunday Best
+            position: absolute
+            font-size: 12px
+            font-weight: 400
     &Bottom
         max-width: 274px
         position: relative
+        @media (max-width: 500px)
+            max-width: 170px
+            &Img
+                @media (max-width: 500px)
+                    display: none
     &PinkBottom
+        cursor: pointer
         position: absolute
         display: flex
         bottom: 34px
@@ -28,6 +69,13 @@ img
             @media (max-width: 768px)
                 max-width: 72px
                 bottom: 0px
+                @media (max-width: 600px)
+                    max-width: 52px
+                    @media (max-width: 500px)
+                        max-width: 81px
+                        @media (max-width: 350px)
+                            max-width: 50px
+                            bottom: 12px
         &Text
             color: white
             font-family: Sunday Best
@@ -37,10 +85,17 @@ img
             transform: rotate(-48deg)
             @media (max-width: 768px)
                 font-size: 18px
+                @media (max-width: 600px)
+                    font-size: 16px
+                    @media (max-width: 350px)
+                        font-size: 14px
     &Top
         max-width: 274px
         position: relative
+        @media (max-width: 500px)
+            display: none
     &PinkTop
+        cursor: pointer
         max-width: 134px
         position: absolute
         display: flex
@@ -55,6 +110,8 @@ img
             right: inherit
             @media (max-width: 768px)
                 max-width: 108px
+                @media (max-width: 600px)
+                    max-width: 88px
         &Text
             color: white
             font-family: Sunday Best
@@ -63,3 +120,5 @@ img
             font-weight: 400
             @media (max-width: 768px)
                 font-size: 17px
+                @media (max-width: 600px)
+                    font-size: 15px

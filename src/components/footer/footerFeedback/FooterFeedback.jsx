@@ -1,5 +1,3 @@
-// import { Link } from "react-router-dom";
-
 import girl from "../../../assets/img/images/girl.png";
 
 import styles from "./footerFeedback.module.sass";

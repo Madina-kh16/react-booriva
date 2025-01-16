@@ -1,6 +1,6 @@
 import InstagramBlock from "./instagramBlock/InstagramBlock";
-import Hoodies from "./hoodies/Hoodies";
 import BoorivaGirls from "./boorivagirls/BoorivaGirls";
+import Hoodies from "./hoodies/Hoodies";
 
 import styles from "./Instagram.module.sass";
 

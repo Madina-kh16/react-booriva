@@ -1,6 +1,7 @@
-import styles from "./FooterNetworks.module.sass";
 import FooterInstagram from "../../../assets/img/icons/footerInstagram";
 import Facebook from "../../../assets/img/icons/footerFacebook";
+
+import styles from "./FooterNetworks.module.sass";
 
 const FooterNetworks = () => {
   return (

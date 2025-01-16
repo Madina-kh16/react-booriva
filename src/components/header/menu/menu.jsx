@@ -1,4 +1,4 @@
-import styles from "./menu.module.sass";
+import styles from "./Menu.module.sass";
 
 const Menu = () => {
   return (

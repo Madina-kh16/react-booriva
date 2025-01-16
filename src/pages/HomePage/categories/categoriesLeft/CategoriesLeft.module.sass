@@ -3,10 +3,24 @@ img
 
 .categoriesLeft
     max-width: 563px
+    @media (max-width: 500px)
+        max-width: 450px
+        display: flex
+        gap: 8px
+        @media (max-width: 350px)
+            gap: 4px
+    &Shirt
+        @media (max-width: 500px)
+            display: none
+    &ShirtLong
+        display: none
+        @media (max-width: 500px)
+            display: block
     &Big
         position: relative
         max-width: 563px
     &Pink
+        cursor: pointer
         max-width: 205px
         display: flex
         bottom: 19px
@@ -21,10 +35,12 @@ img
                 max-width: 170px
                 bottom: 11px
                 left: 12px
-                // @media (max-width: 480px)
-                //     max-width: 121px
-                //     bottom: 21px
-                //     left: 22px
+                @media (max-width: 600px)
+                    max-width: 150px
+                    @media (max-width: 350px)
+                        max-width: 120px
+                        bottom: 37px
+                        left: 7px
         &Text
             color: white
             font-family: Sunday Best
@@ -33,3 +49,5 @@ img
             font-weight: 400
             @media (max-width: 768px)
                 font-size: 18px
+                @media (max-width: 600px)
+                    font-size: 16px

@@ -12,10 +12,20 @@ img
         @media (max-width: 768px)
             margin-bottom: 9px
             gap: 9px
+            @media (max-width: 500px)
+                max-width: 272px
+                display: inline
+                margin-bottom: 0
+                @media (max-width: 350px)
+                    gap: 4px
     &Dresses
         max-width: 274px
         position: relative
+        &Img
+            @media (max-width: 500px)
+                display: none
     &PinkDresses
+        cursor: pointer
         position: absolute
         display: flex
         bottom: 61px
@@ -29,6 +39,10 @@ img
             @media (max-width: 768px)
                 max-width: 128px
                 bottom: 60px
+                @media (max-width: 600px)
+                    max-width: 85px
+                    @media (max-width: 500px)
+                        display: none
         &Text
             color: white
             font-family: Sunday Best
@@ -37,10 +51,21 @@ img
             font-weight: 400
             @media (max-width: 768px)
                 font-size: 18px
+                @media (max-width: 600px)
+                    font-size: 15px
     &Suits
         max-width: 274px
         position: relative
+        &Img
+            @media (max-width: 500px)
+                display: none
+    &SuitsLong
+        display: none
+        @media (max-width: 500px)
+            display: block
+            max-width: 272px
     &PinkSuits
+        cursor: pointer
         max-width: 186px
         position: absolute
         display: flex
@@ -53,6 +78,16 @@ img
             right: 5px
             @media (max-width: 768px)
                 max-width: 142px
+                @media (max-width: 600px)
+                    max-width: 110px
+                    @media (max-width: 500px)
+                        bottom: 20px
+                        right: inherit
+                        left: 22px
+                        @media (max-width: 350px)
+                            max-width: 100px
+                            bottom: 20px
+                            left: 22px
         &Text
             color: white
             font-family: Sunday Best
@@ -61,3 +96,7 @@ img
             font-weight: 400
             @media (max-width: 768px)
                 font-size: 17px
+                @media (max-width: 600px)
+                    font-size: 13px
+                    @media (max-width: 350px)
+                        font-size: 12px

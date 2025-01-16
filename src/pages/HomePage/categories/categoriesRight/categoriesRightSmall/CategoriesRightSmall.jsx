@@ -2,6 +2,7 @@ import pinkDress from "../../../../../assets/img/images/pinkDress.png";
 import pinkSuit from "../../../../../assets/img/images/pinkSuit.png";
 import dresses from "../../../../../assets/img/images/dresses.png";
 import suits from "../../../../../assets/img/images/suits.png";
+import longSuit from "../../../../../assets/img/images/longSuit.png";
 
 import styles from "./CategoriesRightSmall.module.sass";
 
@@ -24,6 +25,9 @@ const CategoriesRightSmall = () => {
       <div className={styles.categoriesRightSmallSuits}>
         <div className={styles.categoriesRightSmallSuitsImg}>
           <img src={suits} />
+        </div>
+        <div className={styles.categoriesRightSmallSuitsLong}>
+          <img src={longSuit} />
         </div>
         <div className={styles.categoriesRightSmallPinkSuits}>
           <div className={styles.categoriesRightSmallPinkImg}>

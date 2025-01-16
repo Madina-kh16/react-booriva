@@ -1,5 +1,6 @@
 import CategoriesLeftSmall from "./categoriesLeftSmall/CategoriesLeftSmall";
 import pinkShirt from "../../../../assets/img/images/pinkShirt.png";
+import longShirt from "../../../../assets/img/images/longShirt.png";
 import shirts from "../../../../assets/img/images/shirts.png";
 
 import styles from "./CategoriesLeft.module.sass";
@@ -10,6 +11,9 @@ const CategoriesLeft = () => {
       <div className={styles.categoriesLeftBig}>
         <div className={styles.categoriesLeftShirt}>
           <img src={shirts} />
+        </div>
+        <div className={styles.categoriesLeftShirtLong}>
+          <img src={longShirt} />
         </div>
         <div className={styles.categoriesLeftPink}>
           <div className={styles.categoriesLeftPinkImg}>

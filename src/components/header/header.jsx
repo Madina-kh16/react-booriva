@@ -1,7 +1,7 @@
 import HeaderWrap from "./headerWrap/HeaderWrap";
 import Menu from "./menu/Menu";
 
-import styles from "./header.module.sass";
+import styles from "./Header.module.sass";
 
 const Header = () => {
   return (
