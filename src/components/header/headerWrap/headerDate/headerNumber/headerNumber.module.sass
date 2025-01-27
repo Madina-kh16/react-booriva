@@ -1,54 +1,47 @@
-.headerNumber
-    width: 162px
-    display: flex
-    justify-content: space-around
-    align-items: center
-    cursor: pointer
-    @media (max-width: 1000px)
-        width: 155px
-        justify-content: space-between
-        @media (max-width: 700px)
-            width: 150px
-            @media (max-width: 610px)
-                width: 124px
-                @media (max-width: 335px)
-                    width: 100px
-
-.headerNumber
-    @media (max-width: 335px)
-        svg
+.header
+    &Number
+        width: 162px
+        display: flex
+        justify-content: space-around
+        align-items: center
+        cursor: pointer
+        @media (max-width: 1000px)
+            width: 155px
+            justify-content: space-between
+            @media (max-width: 700px)
+                width: 125px
+    svg
+        @media (max-width: 335px)
             width: 15px
+    &PhoneNumber
+        font-family: Montserrat
+        font-size: 12px
+        font-style: italic
+        font-weight: 700
+        text-underline-position: from-font
+        text-decoration-skip-ink: none
+        color: #FDA3C4
+        @media (max-width: 1000px)
+            font-size: 11px
+            @media (max-width: 610px)
+                font-size: 10px
+                @media (max-width: 335px)
+                    font-size: 9px
+    &Booriva
+        display: none
+        @media (max-width: 700px)
+            display: flex
+            width: 82px
+            @media (max-width: 335px)
+                width: 69px
 
 .m
-    @media (max-width: 540px)
+    @media (max-width: 700px)
         display: flex
-        width: 300px
+        width: 56vw
         flex-direction: row-reverse
         justify-content: space-between
-        @media (max-width: 390px)
-            width: 253px
-            @media (max-width: 335px)
-                width: 210px
-
-.headerPhoneNumber
-    font-family: Montserrat
-    font-size: 12px
-    font-style: italic
-    font-weight: 700
-    text-underline-position: from-font
-    text-decoration-skip-ink: none
-    color: #FDA3C4
-    @media (max-width: 1000px)
-        font-size: 11px
-        @media (max-width: 610px)
-            font-size: 10px
-            @media (max-width: 335px)
-                font-size: 9px
-
-.headerBooriva
-    display: none
-    @media (max-width: 540px)
-        display: flex
-        width: 82px
-        @media (max-width: 335px)
-            width: 69px
+        @media (max-width: 470px)
+            width: 62vw
+            @media (max-width: 390px)
+                width: 70vw

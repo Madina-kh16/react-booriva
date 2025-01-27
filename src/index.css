@@ -24,6 +24,11 @@ li {
   font-family: "Oswald";
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   max-width: 1140px;
   margin: 0 auto;

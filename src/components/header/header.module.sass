@@ -1,10 +1,27 @@
 .header
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    z-index: 10
+    position: fixed
+    background-color: #fff
+    box-shadow: 0px 0px 5px #000000
+    border-bottom: 1px solid #FDA3C4
     @media (max-width: 1200px)
-        padding-left: 24px
-        padding-right: 24px
-        @media (max-width: 768px)
-            padding-left: 14px
-            padding-right: 14px
+        padding-left: 15px
+        padding-right: 15px
     &Wrapper
-        max-width: 1140px
+        left: 0
+        right: 0
+        z-index: 5
         margin: 0 auto
+        overflow: hidden
+        max-width: 1440px
+        position: relative
+        background-color: #fff
+
+.menuWrap
+    height: 26px
+    @media (max-width: 700px)
+        display: none

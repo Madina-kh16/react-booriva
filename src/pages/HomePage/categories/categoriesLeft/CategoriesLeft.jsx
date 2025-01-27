@@ -2,6 +2,7 @@ import CategoriesLeftSmall from "./categoriesLeftSmall/CategoriesLeftSmall";
 import pinkShirt from "../../../../assets/img/images/pinkShirt.png";
 import longShirt from "../../../../assets/img/images/longShirt.png";
 import shirts from "../../../../assets/img/images/shirts.png";
+import Button from "../../../../assets/img/images/button.png";
 
 import styles from "./CategoriesLeft.module.sass";
 
