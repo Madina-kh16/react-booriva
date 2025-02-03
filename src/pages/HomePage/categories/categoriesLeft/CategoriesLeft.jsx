@@ -5,23 +5,24 @@ import shirts from "../../../../assets/img/images/shirts.png";
 import Button from "../../../../assets/img/images/button.png";
 
 import styles from "./CategoriesLeft.module.sass";
+import { Link } from "react-router-dom";
 
 const CategoriesLeft = () => {
   return (
     <div className={styles.categoriesLeft}>
       <div className={styles.categoriesLeftBig}>
-        <div className={styles.categoriesLeftShirt}>
+        <Link className={styles.categoriesLeftShirt}>
           <img src={shirts} />
-        </div>
-        <div className={styles.categoriesLeftShirtLong}>
+        </Link>
+        <Link className={styles.categoriesLeftShirtLong}>
           <img src={longShirt} />
-        </div>
-        <div className={styles.categoriesLeftPink}>
+        </Link>
+        <Link className={styles.categoriesLeftPink}>
           <div className={styles.categoriesLeftPinkImg}>
             <img src={pinkShirt} />
           </div>
           <div className={styles.categoriesLeftPinkText}>ФУТБОЛКА</div>
-        </div>
+        </Link>
       </div>
       <CategoriesLeftSmall />
     </div>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/sunday-best?styles=61789");
+@import "./assets/fonts/SundayBest.css";
 @import "./assets/veriables/veriables.module.css";
 
 * {
@@ -16,15 +16,6 @@ h6,
 p,
 ul,
 li {
-  margin: 0;
-  padding: 0;
-}
-
-.body {
-  font-family: "Oswald";
-}
-
-body {
   margin: 0;
   padding: 0;
 }

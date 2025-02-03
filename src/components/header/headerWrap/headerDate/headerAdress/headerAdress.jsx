@@ -6,7 +6,13 @@ const HeaderAdress = () => {
   return (
     <div className={styles.headerAdress}>
       <HeaderMapLogo />
-      <div className={styles.headerAdressStreet}>Киев, Нижний вал, 37</div>
+      <a
+        href="https://maps.app.goo.gl/Tsj7uVjBsnUTFzif9"
+        target="_blank"
+        className={styles.headerAdressStreet}
+      >
+        Пролетар. кечесу Гр.
+      </a>
     </div>
   );
 };

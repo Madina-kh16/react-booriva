@@ -1,0 +1,62 @@
+.catalog
+    margin-top: 170px
+    @media (max-width: 1190px)
+        padding: 0 15px
+        @media (max-width: 780px)
+            margin-top: 160px
+            @media (max-width: 700px)
+                margin-top: 61px
+                @media (max-width: 400px)
+                    padding: 0 0
+    &TopTitle
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        gap: 58px
+        max-width: 1140px
+        @media (max-width: 1000px)
+            gap: 40px
+            @media (max-width: 670px)
+                gap: 60px
+                @media (max-width: 480px)
+                    gap: 20px
+                    @media (max-width: 400px)
+                        display: block
+    &Wraps
+        max-width: 949px
+        display: flex
+        flex-wrap: wrap
+        gap: 15px 88px
+        justify-content: space-between
+        @media (max-width: 1000px)
+            gap: 15px 44px
+            @media (max-width: 480px)
+                margin: 0 auto
+                display: block
+    &Wrap
+        width: calc( 50% - 44px )
+        @media (max-width: 480px)
+            width: inherit
+.hb
+    max-width: 1140px
+    display: flex
+    justify-content: space-between
+    margin: 50px 0
+    gap: 89px
+    @media (max-width: 768px)
+        gap: 38px
+        @media (max-width: 635px)
+            gap: 0
+            @media (max-width: 480px)
+                display: block
+                @media (max-width: 400px)
+                    margin: 10px 15px
+.disp
+    display: none
+    @media (max-width: 400px)
+        display: block
+        margin-top: 28px
+        margin-left: 15px
+    &Main
+        @media (max-width: 400px)
+            display: none

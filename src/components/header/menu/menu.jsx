@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Menu.module.sass";
+import { Link, Links } from "react-router-dom";
 
 const Menu = ({ isShow, setIsShow }) => {
   const [menu, setMenu] = useState([
@@ -40,20 +41,27 @@ const Menu = ({ isShow, setIsShow }) => {
   ]);
 
   return (
-    <div className={styles.menuItems}>
+    <ul className={styles.menuItems}>
       {menu.map(({ id, name }) => (
-        <div
+        <li
           className={styles.menuItem}
           key={id}
           onMouseEnter={() => setIsShow(true)}
           onMouseLeave={() => setIsShow(false)}
         >
-          {name.toUpperCase()}
-        </div>
+          <Link to="/catalog" className={styles.list}>
+            {" "}
+            {name.toUpperCase()}{" "}
+          </Link>
+        </li>
       ))}
 
-      <div className={styles.menuItem}>#BOORIVAGERLS</div>
-    </div>
+      <div className={styles.menuItem}>
+        <Link to="/about_us" className={styles.list}>
+          #BOORIVAGERLS
+        </Link>
+      </div>
+    </ul>
   );
 };
 

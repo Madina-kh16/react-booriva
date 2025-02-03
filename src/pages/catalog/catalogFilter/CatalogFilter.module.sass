@@ -1,0 +1,39 @@
+.catalogFilter
+    display: flex
+    flex-direction: column
+    gap: 60px
+    @media (max-width: 635px)
+        display: none
+    &Price
+        display: flex
+        flex-direction: column
+        gap: 30px
+    &Category
+        display: flex
+        flex-direction: column
+        gap: 30px
+        &Title
+            font-family: Montserrat
+            font-size: 20px
+            font-weight: 700
+            @media (max-width: 635px)
+                font-size: 17px
+        &Items
+            display: flex
+            flex-direction: column
+            gap: 15px
+        &Item
+            font-family: Montserrat
+            font-size: 18px
+            font-weight: 600
+            color: black
+            &:hover
+                color: #FDA3C4
+            @media (max-width: 635px)
+                font-size: 15px
+    &Size
+        display: none
+        @media (max-width: 1000px)
+            display: flex
+            flex-direction: column
+            gap: 30px

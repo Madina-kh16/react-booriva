@@ -2,91 +2,59 @@ img
     display: block
 
 .newItems
+    padding: 0 20px
+    @media (max-width: 1000px)
+        padding: 0 10px
     &Cards
         display: flex
-        max-width: 1400px
+        max-width: 1440px
         margin: 37px auto 55px
+        gap: 10px
         justify-content: space-between
-        @media (max-width: 750px)
-            margin: 37px 10px 55px
+        @media (max-width: 1500px)
+            margin: 37px 0px 55px
             @media (max-width: 600px)
                 flex-wrap: wrap
-                gap: 10px 0
-    &CardItemNone
-        cursor: pointer
-        max-width: 360px
-        display: flex
-        flex-direction: column
-        align-items: center
-        @media (max-width: 940px)
-            display: none
-            @media (max-width: 600px)
-                display: block
-                max-width: 250px
-                @media (max-width: 537px)
-                    max-width: 230px
-                    @media (max-width: 497px)
-                        max-width: 200px
-                        @media (max-width: 450px)
-                            max-width: 170px
-                            @media (max-width: 380px)
-                                max-width: 145px
-                                @media (max-width: 326px)
-                                    max-width: 135px
-                                    @media (max-width: 305px)
-                                        max-width: 125px
+                @media (max-width: 320px)
+                    margin: 20px 0px 55px
     &CardItem
-        cursor: pointer
-        max-width: 360px
-        display: flex
-        flex-direction: column
-        align-items: center
-        @media (max-width: 730px)
-            max-width: 200px
-            @media (max-width: 650px)
-                max-width: 190px
+        &None
+            cursor: pointer
+            @media (max-width: 940px)
+                display: none
                 @media (max-width: 600px)
+                    display: block
                     max-width: 250px
-                    @media (max-width: 537px)
+                    @media (max-width: 548px)
                         max-width: 230px
-                        @media (max-width: 497px)
+                        @media (max-width: 507px)
                             max-width: 200px
                             @media (max-width: 450px)
-                                max-width: 170px
-                                @media (max-width: 380px)
-                                    max-width: 145px
-                                    @media (max-width: 326px)
-                                        max-width: 135px
-                                        @media (max-width: 305px)
-                                            max-width: 125px
+                                max-width: 190px
+                                @media (max-width: 430px)
+                                    max-width: 175px
+                                    @media (max-width: 398px)
+                                        max-width: 155px
+                                        @media (max-width: 358px)
+                                            max-width: 140px
+                                            @media (max-width: 328px)
+                                                max-width: 130px
+                                                @media (max-width: 308px)
+                                                    max-width: 115px
+                                                    @media (max-width: 278px)
+                                                        max-width: 105px
+                                                        @media (max-width: 258px)
+                                                            max-width: 90px
         &Common
             max-width: 350px
             position: relative
-        &Switer
+            border-bottom: 2px solid #FDA3C4
+        &Img
             display: flex
             justify-content: center
-        &Line
-            width: 320px
-            bottom: 0
-            position: absolute
-            height: 2px
-            background-color: #FDA3C4
-            @media (max-width: 1300px)
-                width: 250px
-                @media (max-width: 1050px)
-                    width: 220px
-                    @media (max-width: 940px)
-                        width: 222px
-                        @media (max-width: 730px)
-                            width: 200px
-                            @media (max-width: 650px)
-                                width: 180px
-                                @media (max-width: 600px)
-                                    width: 205px
-                                    @media (max-width: 450px)
-                                        max-width: 170px
-                                        @media (max-width: 380px)
-                                            max-width: 133px
+            img
+                max-width: 100%
+                width: 350px
         &Heart
             position: absolute
             top: 15px
@@ -101,17 +69,6 @@ img
             justify-content: space-between
             margin-top: 20px
             gap: 5px
-            @media (max-width: 1300px)
-                width: 230px
-                @media (max-width: 730px)
-                    max-width: 189px
-                    @media (max-width: 650px)
-                        max-width: 180px
-                        @media (max-width: 450px)
-                            max-width: 159px
-                            margin-top: 10px
-                            @media (max-width: 380px)
-                                max-width: 120px
         &Text
             max-width: 198px
             font-family: Montserrat
@@ -127,12 +84,14 @@ img
                         @media (max-width: 650px)
                             font-size: 11px
                             line-height: inherit
-                            @media (max-width: 450px)
-                                max-width: 103px
-                                font-size: 10px
+                            @media (max-width: 480px)
+                                font-size: 12px
                                 @media (max-width: 380px)
-                                    max-width: 83px
-                                    font-size: 8px
+                                    font-size: 11px
+                                    @media (max-width: 320px)
+                                        font-size: 10px
+                                        @media (max-width: 290px)
+                                            font-size: 8px
         &Price
             font-family: Montserrat
             text-align: center
@@ -142,19 +101,12 @@ img
             color: #FDA3C4
             @media (max-width: 1300px)
                 font-size: 16px
-                @media (max-width: 450px)
-                    font-size: 14px
-                    width: 63px
+                @media (max-width: 480px)
+                    font-size: 16px
                     @media (max-width: 380px)
-                        font-size: 10px
-                        max-width: 45px
-
-.mg
-    margin-bottom: -3px
-    @media (max-width: 380px)
-        margin-bottom: -1px
-.button
-    @media (max-width: 650px)
-        max-width: 150px
-        margin: 0 auto
-        font-size: 13px
+                        max-width: 48px
+                        font-size: 13px
+                        @media (max-width: 320px)
+                            font-size: 12px
+                            @media (max-width: 290px)
+                                font-size: 10px

@@ -8,7 +8,6 @@ import styles from "./HeaderWrap.module.sass";
 const HeaderWrap = () => {
   return (
     <div className={styles.headerWrap}>
-      {/* <HeaderBooriva /> */}
       <HeaderDate />
       <HeaderBooriva />
       <HeaderSearch />

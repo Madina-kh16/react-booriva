@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import HeaderBoorivaLogo from "../../../../assets/img/icons/headerBoorivaLogo";
 
 import styles from "./HeaderBooriva.module.sass";
 
 const HeaderBooriva = () => {
   return (
-    <div className={styles.headerBooriva}>
+    <Link to="/" className={styles.headerBooriva}>
       <HeaderBoorivaLogo />
-    </div>
+    </Link>
   );
 };
 

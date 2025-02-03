@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import HeaderBoorivaLogo from "../../../../../assets/img/icons/headerBoorivaLogo";
 import HeaderPhoneLogo from "../../../../../assets/img/icons/headerPhoneLogo";
 
@@ -7,12 +9,16 @@ const HeaderNumber = () => {
   return (
     <div className={styles.m}>
       <div className={styles.headerNumber}>
-        <HeaderPhoneLogo />
-        <div className={styles.headerPhoneNumber}>+7(999) 999 99 99</div>
+        <div className={styles.headerNumberLogo}>
+          <HeaderPhoneLogo />
+        </div>
+        <a href="tel:+79999999999" className={styles.headerPhoneNumber}>
+          +7(999) 999 99 99
+        </a>
       </div>
-      <div className={styles.headerBooriva}>
+      <Link to={"/"} className={styles.headerBooriva}>
         <HeaderBoorivaLogo />
-      </div>
+      </Link>
     </div>
   );
 };

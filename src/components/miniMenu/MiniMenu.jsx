@@ -1,7 +1,9 @@
-import HeaderBascetLogo from "../../../assets/img/icons/headerBascetLogo";
-import HeaderHeartLogo from "../../../assets/img/icons/headerHeartLogo";
-import IconsMenu from "../../../assets/img/icons/IconsMenu";
-import IconsSend from "../../../assets/img/icons/IconsSend";
+import { Link } from "react-router-dom";
+import HeaderBascetLogo from "../../assets/img/icons/headerBascetLogo";
+import HeaderHeartLogo from "../../assets/img/icons/headerHeartLogo";
+import IconsMenu from "../../assets/img/icons/IconsMenu";
+import IconsSend from "../../assets/img/icons/IconsSend";
+
 import styles from "./MiniMenu.module.sass";
 
 const MiniMenu = () => {
@@ -27,12 +29,12 @@ const MiniMenu = () => {
             </div>
             <div className={styles.miniMenuItemText}>Корзина</div>
           </div>
-          <div className={styles.miniMenuItem}>
+          <Link to={"/wishList"} className={styles.miniMenuItem}>
             <div className={styles.miniMenuItemImg}>
               <HeaderHeartLogo />
             </div>
             <div className={styles.miniMenuItemText}>Wish list</div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
