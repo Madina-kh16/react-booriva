@@ -1,0 +1,102 @@
+.productPage
+    max-width: 1144px
+    margin: 207px auto 60px
+    padding: 15px
+    &Swip
+        gap: 40px
+        display: flex
+        justify-content: space-between
+        @media (max-width: 1000px)
+            gap: 15px
+    &Swipers
+        gap: 10px
+        width: 50%
+        height: 609px
+        display: flex
+        flex-direction: row-reverse
+        @media (max-width: 1000px)
+            min-width: 450px
+            @media (max-width: 810px)
+                min-width: inherit
+                display: block
+                width: 49%
+    &Desc
+        max-width: 471px
+    &Title
+        font-family: Montserrat
+        font-size: 36px
+        font-weight: 600
+        line-height: 43.88px
+        margin-bottom: 5px
+        @media (max-width: 1000px)
+            font-size: 25px
+    &Price
+        color: #FDA3C4
+        font-family: Montserrat
+        font-size: 42px
+        font-weight: 700
+        line-height: 51.2px
+        margin-bottom: 10px
+    &Sizes
+        margin-bottom: 20px
+        &Text
+            font-family: Montserrat
+            font-size: 14px
+            font-style: italic
+            font-weight: 400
+            line-height: 17px
+            margin-bottom: 10px
+        &Items
+            gap: 5px
+            display: flex
+            max-width: 466px
+            justify-content: space-between
+        &Item
+            font-family: Montserrat
+            font-size: 20px
+            font-style: italic
+            cursor: pointer
+            padding: 5px
+            font-weight: 400
+            line-height: 24.38px
+            border-bottom: 1px solid
+            border-top: 1px solid
+            width: 82px
+            text-align: center
+            @media (max-width: 1000px)
+                width: 70px
+                font-size: 16px
+    &Text
+        font-family: Montserrat
+        font-size: 14px
+        font-weight: 400
+        margin-bottom: 26px
+        margin-top: 30px
+        line-height: 17.07px
+        max-width: 473px
+        @media (max-width: 1000px)
+            max-width: 327px
+    &Compound
+        font-family: Montserrat
+        font-size: 14px
+        font-weight: 400
+        max-width: 300px
+    &Span
+        font-family: Montserrat
+        font-size: 14px
+        font-weight: 600
+
+.mySwiper
+    @media (max-width: 810px)
+        height: 85px
+        direction: inherit
+
+.mySwiper > .swiper-wrapper
+    @media (max-width: 810px)
+        flex-direction: inherit !important
+
+.slide
+    width: 100%
+    @media (max-width: 810px)
+        height: 85px
+        width: 65px
