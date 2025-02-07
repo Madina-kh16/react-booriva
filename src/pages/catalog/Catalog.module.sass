@@ -23,10 +23,11 @@
                     @media (max-width: 400px)
                         display: block
     &Wraps
-        max-width: 949px
         display: flex
-        flex-wrap: wrap
         gap: 15px 88px
+        margin: 0 auto
+        flex-wrap: wrap
+        max-width: 949px
         justify-content: space-between
         @media (max-width: 1000px)
             gap: 15px 44px
@@ -34,15 +35,19 @@
                 margin: 0 auto
                 display: block
     &Wrap
-        width: calc( 50% - 44px )
+        width: calc( 50% - 51px )
         @media (max-width: 480px)
             width: inherit
+    &Wrap2
+        width: calc( 50% - -211px )
+        @media (max-width: 480px)
+            width: inherit
+
 .hb
     max-width: 1140px
     display: flex
-    justify-content: space-between
     margin: 50px 0
-    gap: 89px
+    gap: 80px
     @media (max-width: 768px)
         gap: 38px
         @media (max-width: 635px)
@@ -60,3 +65,7 @@
     &Main
         @media (max-width: 400px)
             display: none
+
+
+.disp2 
+    display: none

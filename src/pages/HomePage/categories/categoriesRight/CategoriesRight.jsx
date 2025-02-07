@@ -6,13 +6,14 @@ import smallTop from "../../../../assets/img/images/smallTop.png";
 import pinkTop from "../../../../assets/img/images/pinkTop.png";
 
 import styles from "./CategoriesRight.module.sass";
+import { Link } from "react-router-dom";
 
 const CategoriesRight = () => {
   return (
     <div className={styles.categoriesRight}>
       <CategoriesRightSmall />
       <div className={styles.categoriesRightSmallWrap}>
-        <div className={styles.categoriesRightSmallTop}>
+        <Link to={'/catalog?menuId=ab002'} className={styles.categoriesRightSmallTop}>
           <div className={styles.categoriesRightSmallTopImg}>
             <img src={smallTop} />
           </div>
@@ -22,8 +23,8 @@ const CategoriesRight = () => {
             </div>
             <div className={styles.categoriesRightSmallPinkTopText}>ВЕРХ</div>
           </div>
-        </div>
-        <div className={styles.categoriesRightBig}>
+        </Link>
+        <Link to={'/catalog?categoryId=ab003'} className={styles.categoriesRightBig}>
           <div className={styles.categoriesRightHoodi}>
             <img src={hoodies} />
           </div>
@@ -36,7 +37,7 @@ const CategoriesRight = () => {
             </div>
             <div className={styles.categoriesRightPinkText}>ХУДИ</div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

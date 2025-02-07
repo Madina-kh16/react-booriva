@@ -13,34 +13,35 @@ const NewItems = () => {
   const [card, setCard] = useState([
     {
       id: "001",
-      descriptoin: "Бомбер Gone Crazy хаки",
+      name: "Бомбер Gone Crazy хаки",
       price: "1 099₴",
-      photo: Sweater,
+      images: Sweater,
     },
     {
       id: "002",
-      descriptoin: "Бомбер Gone Crazy хаки",
+      name: "Бомбер Gone Crazy хаки",
       price: "1 299₴",
-      photo: Dress,
+      images: Dress,
     },
     {
       id: "003",
-      descriptoin: "Бомбер Gone Crazy хаки",
+      name: "Бомбер Gone Crazy хаки",
       price: "2 499₴",
-      photo: Bomber,
+      images: Bomber,
     },
   ]);
+  
   return (
     <div className={styles.newItems}>
       <Headline />
       <div className={styles.newItemsCards}>
-        {card.map(({ descriptoin, id, price, photo }) => {
+        {card.map(({ name, id, price, images }) => {
           return (
             <Card
-              descriptoin={descriptoin}
+              name={name}
               key={id}
               price={price}
-              photo={photo}
+              images={images}
               widthImg={"350px"}
             />
           );

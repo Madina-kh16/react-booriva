@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import styles from "./Menu.module.sass";
 import { Link } from "react-router-dom";
+
 import { getMenuItems } from "../../../services/menu";
 
-const Menu = ({ setIsShow }) => {
+import styles from "./Menu.module.sass";
+
+const Menu = ({ setIsShow, setMenuId }) => {
   const [menu, setMenu] = useState([]);
 
   useEffect(() => {
@@ -13,20 +15,19 @@ const Menu = ({ setIsShow }) => {
   return (
     <ul className={styles.menuItems}>
       {menu.map(({ id, name }) => (
-        <li
+          <Link 
+          to={`/catalog?menuId=${id}`} 
           className={styles.menuItem}
           key={id}
-          onMouseEnter={() => setIsShow(true)}
+          onMouseEnter={() => {setIsShow(true); setMenuId(id)}}
           onMouseLeave={() => setIsShow(false)}
-        >
-          <Link to="/catalog" className={styles.list}>
-            {name.toUpperCase()}
+          >
+            {name}
           </Link>
-        </li>
       ))}
 
       <div className={styles.menuItem}>
-        <Link to="/about_us" className={styles.list}>
+        <Link to="/about_us" className={styles.list} >
           #BOORIVAGERLS
         </Link>
       </div>

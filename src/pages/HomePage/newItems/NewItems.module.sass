@@ -20,6 +20,7 @@ img
     &CardItem
         &None
             cursor: pointer
+            width: calc(50% - 51px)
             @media (max-width: 940px)
                 display: none
                 @media (max-width: 600px)
@@ -29,6 +30,7 @@ img
                         max-width: 230px
                         @media (max-width: 507px)
                             max-width: 200px
+                            width: 100%
                             @media (max-width: 450px)
                                 max-width: 190px
                                 @media (max-width: 430px)
@@ -40,15 +42,11 @@ img
                                             @media (max-width: 328px)
                                                 max-width: 130px
                                                 @media (max-width: 308px)
-                                                    max-width: 115px
-                                                    @media (max-width: 278px)
-                                                        max-width: 105px
-                                                        @media (max-width: 258px)
-                                                            max-width: 90px
+                                                    max-width: inherit
         &Common
             max-width: 350px
             position: relative
-            border-bottom: 2px solid #FDA3C4
+            border-bottom: 3px solid #FDA3C4
         &Img
             display: flex
             justify-content: center
@@ -64,11 +62,11 @@ img
                 top: 8px
                 right: 8px
         &Subtitle
-            max-width: 310px
             display: flex
             justify-content: space-between
-            margin-top: 20px
+            margin: 20px auto
             gap: 5px
+            align-items: center
         &Text
             max-width: 198px
             font-family: Montserrat

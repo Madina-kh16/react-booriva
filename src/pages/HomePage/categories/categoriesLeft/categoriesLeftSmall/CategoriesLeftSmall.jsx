@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import pinkBottom from "../../../../../assets/img/images/pinkBottom.png";
 import pinkTop from "../../../../../assets/img/images/pinkTop.png";
 import pinkDress from "../../../../../assets/img/images/pinkDress.png";
@@ -11,7 +13,7 @@ import styles from "./CategoriesLeftSmall.module.sass";
 const CategoriesLeftSmall = () => {
   return (
     <div className={styles.categoriesLeftSmall}>
-      <div className={styles.categoriesLeftSmallDresses}>
+      <Link to={'/catalog?menuId=001'} className={styles.categoriesLeftSmallDresses}>
         <div className={styles.categoriesLeftSmallDressesImg}>
           <img src={hightDress} />
         </div>
@@ -23,8 +25,8 @@ const CategoriesLeftSmall = () => {
             ПЛАТЬЯ
           </div>
         </div>
-      </div>
-      <div className={styles.categoriesLeftSmallBottom}>
+      </Link>
+      <Link to={'/catalog?menuId=003'} className={styles.categoriesLeftSmallBottom}>
         <div className={styles.categoriesLeftSmallBottomImg}>
           <img src={bottoms} />
         </div>
@@ -37,8 +39,8 @@ const CategoriesLeftSmall = () => {
           </div>
           <div className={styles.categoriesLeftSmallPinkBottomText}>НИЗ</div>
         </div>
-      </div>
-      <div className={styles.categoriesLeftSmallTop}>
+      </Link>
+      <Link to={'/catalog?menuId=002'} className={styles.categoriesLeftSmallTop}>
         <div className={styles.categoriesLeftSmallTopImg}>
           <img src={tops} />
         </div>
@@ -48,7 +50,7 @@ const CategoriesLeftSmall = () => {
           </div>
           <div className={styles.categoriesLeftSmallPinkTopText}>ВЕРХ</div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

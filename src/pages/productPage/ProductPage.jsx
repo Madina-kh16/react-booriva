@@ -1,46 +1,41 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from "react-router-dom";
+import  { useEffect, useState } from 'react';
 
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+
+import { getProductCard } from '../../services/productCard';
+import { useLocation } from 'react-router-dom';
+import qs from 'qs';
 
 import Delivery from "../../components/delivery/Delivery";
 import Button from "../../components/button/Button";
 
 import styles from "./ProductPage.module.sass";
 
+
 const ProductPage = () => {
-  const [productCard, setProductCard] = useState([
-    {
-      id: "y005",
-      name: "Рубашка оверсайз",
-      price: "2 599" + " ₴",
-      news: true,
-      categoryId: "ab002",
-      menuId: "002",
-      desc: "Уход: Ручная стирка при максимальной температуре 40ºС, Не отбеливать, Машинная сушка запрещена, Глажение при 110ºС, Профессиональная сухая чистка. Мягкий режим.",
-      details: " 65% полиэстер, 35% хлопок. Страна-производитель: ВЬЕТНАМ",
-      images: [
-        "https://i.ibb.co/7rv6xWm/1.jpg",
-        "https://i.ibb.co/4t6DcJz/2.jpg",
-        "https://i.ibb.co/0nT7QWx/3.jpg",
-        "https://i.ibb.co/vhyJDdK/4.jpg",
-      ],
-    },
-  ]);
+  const [productCard, setProductCard] = useState([]);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [direc, setDirec] = useState(window.length < 811);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (qs.parse(location.search.substring(1)).id) {
+      const data = getProductCard(qs.parse(location.search.substring(1)).id)
+      data.then((res) => setProductCard(res))}
+    }, [location])
+  
   return (
     <div className={styles.productPage}>
-      <div className={styles.productPageSwip}>
-        {productCard.map(({ images }) => {
+        {productCard.map(({ images, id, name, price, desc, details }) => {
           return (
-            <div className={styles.productPageSwipers}>
+            <div className={styles.productPageSwip} key={id}>
+              <div className={styles.productPageSwipers} >
               <Swiper
                 style={{
                   "--swiper-navigation-color": "#fff",
@@ -89,37 +84,33 @@ const ProductPage = () => {
                   <img src={images[3]} style={{ width: "100vw" }} />
                 </SwiperSlide>
               </Swiper>
+              </div>
+              <div className={styles.productPageDesc}>
+                <div className={styles.productPageTitle}>{name}</div>
+                <div className={styles.productPagePrice}>{price + " ₽"}</div>
+                <div className={styles.productPageSizes}>
+                  <div className={styles.productPageSizesText}>
+                    Выбрать размер:
+                  </div>
+                  <div className={styles.productPageSizesItems}>
+                    <div className={styles.productPageSizesItem}>XS — S</div>
+                    <div className={styles.productPageSizesItem}>S — M</div>
+                    <div className={styles.productPageSizesItem}>M — L</div>
+                    <div className={styles.productPageSizesItem}>L — XL</div>
+                  </div>
+                </div>
+                <div className={styles.productPageBtn}>
+                  <Button text={"в корзину"} widthImg={"219px"} />
+                </div>
+                <div className={styles.productPageText}>{desc}</div>
+                <div className={styles.productPageCompound}>
+                  <span className={styles.productPageSpan}>Состав:</span>
+                  {details}
+                </div>
+              </div>
             </div>
           );
         })}
-        {productCard.map(({ id, name, price, desc, details }) => {
-          return (
-            <div className={styles.productPageDesc} id={id}>
-              <div className={styles.productPageTitle}>{name}</div>
-              <div className={styles.productPagePrice}>{price}</div>
-              <div className={styles.productPageSizes}>
-                <div className={styles.productPageSizesText}>
-                  Выбрать размер:
-                </div>
-                <div className={styles.productPageSizesItems}>
-                  <div className={styles.productPageSizesItem}>XS — S</div>
-                  <div className={styles.productPageSizesItem}>S — M</div>
-                  <div className={styles.productPageSizesItem}>M — L</div>
-                  <div className={styles.productPageSizesItem}>L — XL</div>
-                </div>
-              </div>
-              <div className={styles.productPageBtn}>
-                <Button text={"в корзину"} widthImg={"219px"} />
-              </div>
-              <div className={styles.productPageText}>{desc}</div>
-              <div className={styles.productPageCompound}>
-                <span className={styles.productPageSpan}>Состав:</span>
-                {details}
-              </div>
-            </div>
-          );
-        })}
-      </div>
       <Delivery />
     </div>
   );

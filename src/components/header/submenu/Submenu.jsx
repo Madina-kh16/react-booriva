@@ -1,32 +1,34 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import styles from "./Submenu.module.sass";
 import { getSubmenuItems } from "../../../services/submenu";
 
-const Submenu = ({ isShow, setIsShow }) => {
+import styles from "./Submenu.module.sass";
+
+const Submenu = ({ isShow, setIsShow, menuId }) => {
   const [submenu, setSubmenu] = useState([]);
 
   useEffect(() => {
-    getSubmenuItems().then((res) => setSubmenu(res));
-  }, []);
+   const data = getSubmenuItems(menuId);
+   data.then((res) => setSubmenu(res))
+  }, [menuId]);
 
   return (
-    <div
-      className={
-        styles.submenu + " wrapper " + (isShow ? styles.show : styles.hidden)
-      }
+    <ul
+      className={styles.submenu + " wrapper " + (isShow ? styles.show : styles.hidden)}
       onMouseEnter={() => setIsShow(true)}
       onMouseLeave={() => setIsShow(false)}
     >
-      <ul className={styles.submenuItems}>
-        {submenu.map(({ name, id }) => {
-          <Link to="/catalog" className={styles.submenuItem} id={id}>
-            {name}
-          </Link>;
-        })}
-      </ul>
-    </div>
+      <div className={styles.submenuItems}>
+        {submenu.map(({ id,  name}) => (
+          <li key={id}>
+            <Link to={`/catalog?categoryId=${id}`} className={styles.submenuItem} key={id}>
+              {name}
+            </Link>
+          </li>
+        ))}
+      </div>
+    </ul>
   );
 };
 

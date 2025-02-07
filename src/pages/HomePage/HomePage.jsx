@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import NewCollection from "./newCollection/newCollection";
+import NewCollection from "./newCollection/NewCollection";
 import MiniMenu from "../../components/miniMenu/MiniMenu";
 import BoorivaStore from "./boorivaStore/BoorivaStore";
 import TopProducts from "./topProducts/TopProducts";
@@ -16,7 +16,7 @@ const HomePage = () => {
       <Categories />
       <MiniMenu />
       <NewItems />
-      <Link to={"/catalog"} className={styles.button}>
+      <Link to={`/catalog?menuId=000`} className={styles.button}>
         <Button text={"Смотреть всё"} widthImg={"180px"} margin={"0 auto"} />
       </Link>
       <NewCollection />
