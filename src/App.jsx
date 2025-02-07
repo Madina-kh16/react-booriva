@@ -9,6 +9,8 @@ import WishListEmpty from "./pages/wishListEmpty/WishListEmpty";
 import ProductPage from "./pages/productPage/ProductPage";
 
 function App() {
+  console.log('gffff');
+  
   return (
     <div className="div">
       <Header />
