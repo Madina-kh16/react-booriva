@@ -13,14 +13,26 @@
         justify-content: space-between
         display: flex
         gap: 15px
-        flex-wrap: wrap
         margin-top: 18px
+        flex-wrap: wrap
         @media (max-width: 320px)
             margin: 20px 0px 55px
         &Page
-            width: calc(33% - 10px)
-            @media (max-width: 600px)
-                width: calc(50% - 10px)
+            width: 320px
+            display: flex
+            justify-content: center
+            @media (max-width: 1087px)
+                width: calc(64% - 320px)
+                @media (max-width: 950px)
+                    width: calc(64% - 290px)
+                    @media (max-width: 890px)
+                        width: calc(63% - 265px)
+                        @media (max-width: 815px)
+                            width: calc(63% - 250px)
+                            @media (max-width: 768px)
+                                width: calc(64% - 108px)
+                                @media (max-width: 600px)
+                                    width: calc(50% - 10px)
     &Title
         margin: 0 auto 40px
         max-width: 1140px

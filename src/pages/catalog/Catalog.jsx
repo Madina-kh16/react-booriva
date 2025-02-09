@@ -53,18 +53,19 @@ const Catalog = () => {
           </div>
         </div>
         <div className={styles.hb}>
-          <div className={qs.parse(location.search.substring(1)).menuId ? styles.catalogFilter : styles.disp2}>
+          <div className={card.length > 0  ? qs.parse(location.search.substring(1)).menuId ? styles.catalogFilter : styles.disp2 : styles.disp2}>
             <CatalogFilter />
           </div>
           <div className={styles.catalogWraps}>
-            {card.map(({ name, price, images, id }) => {
+            {card.length > 0 
+            ? card.map(({ name, price, images, id }) => {
               return card.length != 1 ?
                  (
                   <div className={styles.catalogWrap} key={id}>
                     <Card
                       id={id}
                       name={name}
-                      price={price + " ₽"}
+                      price={price}
                       images={images}
                       widthImg={"100%"}
                       maxWidth={"410px"}
@@ -86,7 +87,11 @@ const Catalog = () => {
                     />
                   </div>
                 )
-            })}
+            }) :
+            <div className={styles.catalogEmpty}>
+              Товаров данной категорий нет 
+            </div>
+            }
           </div>
         </div>
       </div>

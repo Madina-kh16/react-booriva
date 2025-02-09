@@ -13,23 +13,24 @@ const WishList = () => {
   const [card, setCard] = useState([
     {
       id: "001",
-      descriptoin: "Бомбер Gone Crazy хаки",
-      price: "1 099₴",
-      photo: Sweater,
+      name: "Бомбер Gone Crazy хаки",
+      price: "1 099",
+      images: Sweater,
     },
     {
       id: "002",
-      descriptoin: "Бомбер Gone Crazy хаки",
-      price: "1 099₴",
-      photo: Sweater,
+      name: "Бомбер Gone Crazy хаки",
+      price: "1 099",
+      images: Sweater,
     },
     {
       id: "003",
-      descriptoin: "Бомбер Gone Crazy хаки",
-      price: "1 099₴",
-      photo: Sweater,
+      name: "Бомбер Gone Crazy хаки",
+      price: "1 099",
+      images: Sweater,
     },
   ]);
+  
   return (
     <div className={styles.wishList}>
       <div className={styles.wishListTitle}>
@@ -37,15 +38,17 @@ const WishList = () => {
         <Subtitle subtitle={"твой тайный список желаний"} />
       </div>
       <div className={styles.wishListWrap}>
-        {card.map(({ descriptoin, id, price, photo }) => {
+        {card.map(({ name, id, price, images }) => {
           return (
-            <div className={styles.wishListWrapPage}>
+            <div className={styles.wishListWrapPage} key={id}>
               <Card
-                descriptoin={descriptoin}
-                key={id}
+                widthItem={'calc(50% - -160px)'}
+                id={id}
+                name={name}
                 price={price}
-                photo={photo}
+                images={images}
                 widthImg={"350px"}
+                maxWidthItem={'inherit'}
               />
             </div>
           );

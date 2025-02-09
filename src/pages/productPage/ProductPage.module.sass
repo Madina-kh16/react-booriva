@@ -1,13 +1,17 @@
 .productPage
     max-width: 1144px
-    margin: 207px auto 60px
+    margin: 167px auto 60px
     padding: 15px
+    @media (max-width: 700px)
+        margin: 90px auto 60px
     &Swip
         gap: 40px
         display: flex
         justify-content: space-between
         @media (max-width: 1000px)
             gap: 15px
+            @media (max-width: 640px)
+                flex-direction: column
     &Swipers
         gap: 10px
         width: 50%
@@ -15,13 +19,28 @@
         display: flex
         flex-direction: row-reverse
         @media (max-width: 1000px)
-            min-width: 450px
-            @media (max-width: 810px)
-                min-width: inherit
-                display: block
-                width: 49%
+            min-width: 480px
+            @media (max-width: 865px)
+                min-width: 430px
+                @media (max-width: 810px)
+                    min-width: inherit
+                    display: block
+                    width: 49%
+                    @media (max-width: 640px)
+                        width: 100%
+                        height: inherit
+    &Heart
+        position: absolute
+        top: 30px
+        right: 20px
+        @media (max-width: 380px)
+            max-width: 15px
+            top: 8px
+            right: 8px
     &Desc
         max-width: 471px
+        @media (max-width: 640px)
+            margin: 0 auto
     &Title
         font-family: Montserrat
         font-size: 36px
@@ -30,6 +49,8 @@
         margin-bottom: 5px
         @media (max-width: 1000px)
             font-size: 25px
+            @media (max-width: 290px)
+                font-size: 22px
     &Price
         color: #FDA3C4
         font-family: Montserrat
@@ -37,6 +58,10 @@
         font-weight: 700
         line-height: 51.2px
         margin-bottom: 10px
+        @media (max-width: 640px)
+            font-size: 32px
+            @media (max-width: 290px)
+                font-size: 25px
     &Sizes
         margin-bottom: 20px
         &Text
@@ -66,6 +91,22 @@
             @media (max-width: 1000px)
                 width: 70px
                 font-size: 16px
+                @media (max-width: 640px)
+                    width: 57px
+                    font-size: 13px
+                    @media (max-width: 290px)
+                        width: 41px
+                        font-size: 9px
+    &Btn
+        width: 219px
+        @media (max-width: 810px)
+            font-size: 14px
+            @media (max-width: 640px)
+                width: 100%
+                height: 55px
+                @media (max-width: 280px)
+                    width: 210px
+                    font-size: 12px
     &Text
         font-family: Montserrat
         font-size: 14px
@@ -76,30 +117,39 @@
         max-width: 473px
         @media (max-width: 1000px)
             max-width: 327px
+            @media (max-width: 640px)
+                font-size: 12px
     &Compound
         font-family: Montserrat
         font-size: 14px
         font-weight: 400
         max-width: 300px
+        @media (max-width: 640px)
+            font-size: 12px
     &Span
         font-family: Montserrat
         font-size: 14px
         font-weight: 600
 
 .mySwiper
+    width: 100% !important
+    max-width: 96px !important
     @media (max-width: 810px)
         height: 85px
         direction: inherit
-
-.mySwiper > .swiper-wrapper
-    @media (max-width: 810px)
-        flex-direction: inherit !important
+        max-width: inherit !important
+        @media (max-width: 640px)
+            display: none
 
 .slide
     width: 100%
     @media (max-width: 810px)
         height: 85px
-        width: 65px
+        max-width: 1005 !important
 
 .productPageSizesItem:hover
     color: #FDA3C4
+
+.mySwiper2
+    @media (max-width: 810px)
+        margin-bottom: 10px

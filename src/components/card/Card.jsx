@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import qs from "qs";
 
+import HeartCrowd from "../../assets/img/icons/heartCrowd";
 import Heart from "../../assets/img/icons/heart";
 
 import styles from "./Card.module.sass";
+
 const Card = ({
   id,
   name,
@@ -14,9 +18,12 @@ const Card = ({
   widthItem,
   maxWidthItem,
 }) => {
+  
+  const [crowd, setCrowd] = useState(false);
+  const location = useLocation();
+
   return (
-    <Link
-    to={`/productPage?id=${id}`}
+    <div
     className={styles.newItemsCardItem}
     style={{ width: widthItem, maxWidth: maxWidthItem }}
     >
@@ -24,18 +31,27 @@ const Card = ({
         className={styles.newItemsCardItemCommon}
         style={{ maxWidth: maxWidth }}
       >
-        <div className={styles.newItemsCardItemImg}>
+        <Link 
+        to={qs.parse(location.search.substring(1)).menuId ? `/productPage?id=${id}` : `/catalog?menuId=000`} 
+        className={styles.newItemsCardItemImg}>
           <img src={images} style={{ width: widthImg, height: higthImg}} />
-        </div>
-        <div className={styles.newItemsCardItemHeart}>
-          <Heart />
-        </div>
+        </Link>
+        {
+          crowd ? 
+          <div className={styles.newItemsCardItemHeart} onClick={() => setCrowd(false)}>
+            <HeartCrowd />
+          </div>
+          :
+          <div className={styles.newItemsCardItemHeart} onClick={() => setCrowd(true)}>
+            <Heart />
+          </div>
+        }
       </div>
-      <div className={styles.newItemsCardItemSubtitle}>
+      <Link to={`/productPage?id=${id}`} className={styles.newItemsCardItemSubtitle}>
         <div className={styles.newItemsCardItemText}>{name}</div>
-        <div className={styles.newItemsCardItemPrice}>{price}</div>
-      </div>
-    </Link>
+        <div className={styles.newItemsCardItemPrice}>{price + " ₽"}</div>
+      </Link>
+    </div>
   );
 };
 

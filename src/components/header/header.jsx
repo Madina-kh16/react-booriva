@@ -6,16 +6,16 @@ import Menu from "./menu/Menu";
 
 import styles from "./Header.module.sass";
 
-const Header = () => {
+const Header = ({setIsBasketOpen}) => {
   const [isShow, setIsShow] = useState(false);
   const [menuId, setMenuId] = useState(0)
   
   return (
     <div className={styles.header}>
       <div className={styles.headerWrapper}>
-        <HeaderWrap />
+        <HeaderWrap  setIsBasketOpen={setIsBasketOpen}/>
         <div className={styles.menuWrap}>
-          <Menu setIsShow={setIsShow} setMenuId={setMenuId}/>
+          <Menu setIsShow={setIsShow} setMenuId={setMenuId} />
         </div>
       </div>
       <Submenu isShow={isShow} setIsShow={setIsShow} menuId={menuId}/>

@@ -25,7 +25,6 @@ const Menu = ({ setIsShow, setMenuId }) => {
             {name}
           </Link>
       ))}
-
       <div className={styles.menuItem}>
         <Link to="/about_us" className={styles.list} >
           #BOORIVAGERLS

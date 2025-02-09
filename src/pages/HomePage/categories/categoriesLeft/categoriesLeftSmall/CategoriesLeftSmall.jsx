@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-import pinkBottom from "../../../../../assets/img/images/pinkBottom.png";
-import pinkTop from "../../../../../assets/img/images/pinkTop.png";
-import pinkDress from "../../../../../assets/img/images/pinkDress.png";
-import hightDress from "../../../../../assets/img/images/hightDress.png";
 import hightBottom from "../../../../../assets/img/images/hightBottom.png";
+import hightDress from "../../../../../assets/img/images/hightDress.png";
+import pinkBottom from "../../../../../assets/img/images/pinkBottom.png";
+import pinkDress from "../../../../../assets/img/images/pinkDress.png";
 import bottoms from "../../../../../assets/img/images/bottoms.png";
+import pinkTop from "../../../../../assets/img/images/pinkTop.png";
 import tops from "../../../../../assets/img/images/tops.png";
 
 import styles from "./CategoriesLeftSmall.module.sass";

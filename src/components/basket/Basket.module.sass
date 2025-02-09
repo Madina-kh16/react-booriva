@@ -1,0 +1,153 @@
+.basket
+    height: 100vh
+    width: 518px
+    background-color: #fff
+    position: absolute
+    right: 0
+    z-index: 11
+    transition: .3s linear
+    transform: translateX(100%)
+    @media (max-width: 519px)
+        width: 100%
+        padding: 0 15px
+    &Wrap
+        position: relative
+    &Open
+        transform: translateX(0)
+    &Cross
+        position: absolute
+        cursor: pointer
+        right: 54px
+        top: 39px
+        @media (max-width: 519px)
+            right: 15px
+            top: 45px
+            width: 36px
+    &SmallCross
+        position: relative
+        top: -35px
+        left: 30px
+    &Main
+        margin-top: 85px
+    &Common
+        display: flex
+        flex-direction: column
+        gap: 10px
+        overflow-y: scroll
+        height: calc(100vh - 544px)
+        width: 88%
+        margin: 0 auto 0 0
+        &::-webkit-scrollbar
+            width: 2px
+        &::-webkit-scrollbar-track
+            background-color: #fda3c450
+        &::-webkit-scrollbar-thumb
+            border-radius: 5px
+            background-color: #FDA3C4CC
+        @media (max-width: 480px)
+            width: 100%
+            margin: 0 auto
+    &Title
+        font-family: Montserrat
+        font-weight: 700
+        font-size: 25px
+        line-height: 30.48px
+        text-align: center
+        margin-bottom: 40px
+        @media (max-width: 519px)
+            font-size: 16px
+    &Desc
+        @media (max-width: 480px)
+            margin-right: 10px
+        &Title
+            font-family: Montserrat
+            font-weight: 600
+            font-size: 16px
+            margin-bottom: 8px
+            @media (max-width: 519px)
+                font-size: 14px
+        &Subtitle
+            font-family: Montserrat
+            font-weight: 400
+            font-size: 14px
+            margin-bottom: 30px
+            @media (max-width: 519px)
+                font-size: 12px
+        &Price
+            font-family: Montserrat
+            font-weight: 700
+            font-size: 16px
+            color: #FDA3C4
+    &Img
+        max-width: 155px
+        height: 180px
+        object-fit: cover
+        @media (max-width: 480px)
+            max-width: 115px
+            height: 140px
+    &Products
+        display: flex
+        gap: 10px
+        align-items: center
+    &Payment
+        max-width: 351px
+        margin: 30px auto
+        display: flex
+        flex-direction: column
+        gap: 28px
+        &Main
+            font-family: Montserrat
+            font-weight: 400
+            font-size: 25px
+            @media (max-width: 480px)
+                display: none
+            &Price
+                font-family: Montserrat
+                font-weight: 700
+                font-size: 25px
+        &Wrap
+            display: flex
+            flex-direction: column
+            gap: 8px
+        &TitleOrder
+            display: flex
+            justify-content: space-between
+            font-family: Montserrat
+            font-weight: 400
+            font-size: 16px
+            color: #FDA3C4
+        &TitleDelivery
+            display: flex
+            justify-content: space-between
+            font-family: Montserrat
+            font-weight: 400
+            font-size: 16px
+            color: #FDA3C4
+            @media (max-width: 480px)
+                display: none
+        &Subtitle
+            font-family: Montserrat
+            font-weight: 700
+            font-size: 16px
+            color: #FDA3C4
+    &Btn
+        margin-top: 27px
+
+.backdrop
+    background-color: #000
+    height: 100vh
+    width: 100%
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 11
+    opacity: 0
+    pointer-events: none
+    transition: .3s linear
+    &Open
+        opacity: .7
+        pointer-events: all
+
+.disp
+    display: none

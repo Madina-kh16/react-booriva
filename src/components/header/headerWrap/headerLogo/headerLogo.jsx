@@ -3,11 +3,11 @@ import HeaderHeart from "./headerHeart/HeaderHeart";
 
 import styles from "./HeaderLogo.module.sass";
 
-const HeaderLogo = () => {
+const HeaderLogo = ({ setIsBasketOpen}) => {
   return (
     <div className={styles.headerLogo}>
       <HeaderHeart />
-      <HeaderBasket />
+      <HeaderBasket  setIsBasketOpen={setIsBasketOpen}/>
     </div>
   );
 };

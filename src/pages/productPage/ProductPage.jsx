@@ -10,24 +10,29 @@ import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 import { getProductCard } from '../../services/productCard';
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import qs from 'qs';
 
 import Delivery from "../../components/delivery/Delivery";
 import Button from "../../components/button/Button";
 
 import styles from "./ProductPage.module.sass";
+import Heart from '../../assets/img/icons/heart';
 
 
 const ProductPage = () => {
   const [productCard, setProductCard] = useState([]);
+  const [isBlanket, setIsBlanket] = useState(window.innerWidth < 800);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
     if (qs.parse(location.search.substring(1)).id) {
       const data = getProductCard(qs.parse(location.search.substring(1)).id)
-      data.then((res) => setProductCard(res))}
+      data.then((res) => setProductCard(res))
+    } else {
+      Navigate('/')
+    }
     }, [location])
   
   return (
@@ -37,18 +42,22 @@ const ProductPage = () => {
             <div className={styles.productPageSwip} key={id}>
               <div className={styles.productPageSwipers} >
               <Swiper
-                style={{
+                style={isBlanket ? {
                   "--swiper-navigation-color": "#fff",
                   "--swiper-pagination-color": "#fff",
-                }}
+                  flexDirection: "inherit !important"
+                } : {flexDirection: "column"}}
                 spaceBetween={10}
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper2"
+                className={styles.mySwiper2}
               >
-                <SwiperSlide className={styles.slideBig}>
+                <SwiperSlide className={styles.slideBig} >
                   <img src={images[0]} style={{ width: "100vw" }} />
+                  <div className={styles.productPageHeart}>
+                    <Heart />
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide className={styles.slideBig}>
                   <img src={images[1]} style={{ width: "100vw" }} />
@@ -65,11 +74,11 @@ const ProductPage = () => {
                 spaceBetween={10}
                 slidesPerView={4}
                 freeMode={true}
-                direction={"vertical"}
+                direction={isBlanket ? 'horizontal' : 'vertical'}
                 watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs]}
                 className={styles.mySwiper}
-                style={{ width: "100%", maxWidth: "96px" }}
+                style={isBlanket ? {flexDirection: "inherit !important"} : {flexDirection: "column"}}
               >
                 <SwiperSlide className={styles.slide}>
                   <img src={images[0]} style={{ width: "100vw" }} />
@@ -100,7 +109,7 @@ const ProductPage = () => {
                   </div>
                 </div>
                 <div className={styles.productPageBtn}>
-                  <Button text={"в корзину"} widthImg={"219px"} />
+                  <Button text={"в корзину"} widthImg={"100%"} height={"100%"}/>
                 </div>
                 <div className={styles.productPageText}>{desc}</div>
                 <div className={styles.productPageCompound}>
