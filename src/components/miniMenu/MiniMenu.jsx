@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import HeaderBascetLogo from "../../assets/img/icons/headerBascetLogo";
 import HeaderHeartLogo from "../../assets/img/icons/headerHeartLogo";
 import IconsMenu from "../../assets/img/icons/IconsMenu";
@@ -6,7 +7,7 @@ import IconsSend from "../../assets/img/icons/IconsSend";
 
 import styles from "./MiniMenu.module.sass";
 
-const MiniMenu = () => {
+const MiniMenu = ({ setIsBasketOpen }) => {
   return (
     <div className={styles.miniMenu}>
       <div className={styles.wrapper}>
@@ -23,7 +24,10 @@ const MiniMenu = () => {
             </div>
             <div className={styles.miniMenuItemText}>Написать</div>
           </div>
-          <div className={styles.miniMenuItem}>
+          <div
+            className={styles.miniMenuItem}
+            onClick={() => setIsBasketOpen(true)}
+          >
             <div className={styles.miniMenuItemImg}>
               <HeaderBascetLogo />
             </div>

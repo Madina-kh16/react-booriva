@@ -6,6 +6,17 @@ export const getProductCard = async (id) => {
     } else {
       return [];
     }
-  };
+};
+
+
+export const getProductCardAll = async () => {
+  let res = await fetch(`https://6569c6cede53105b0dd7a33a.mockapi.io/product`);
+  if (res.ok) {
+     res = await res.json();
+     return res;
+  } else {
+    return [];
+  }
+};
 
   

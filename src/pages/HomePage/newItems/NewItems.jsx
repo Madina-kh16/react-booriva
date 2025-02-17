@@ -11,26 +11,27 @@ const NewItems = () => {
   const [card, setCard] = useState([]);
 
   useEffect(() => {
-    getMenuItem().then((res) => setCard(res.slice(0, 4)))
-  }, [])
+    getMenuItem().then((res) => setCard(res.slice(0, 4)));
+  }, []);
 
   return (
     <div className={styles.newItems}>
       <Headline />
       <div className={styles.newItemsCards}>
         {card.map(({ name, id, price, images }) => {
-            return (
-              <Card
-                name={name}
-                key={id}
-                id={'000'}
-                price={price}
-                images={images}
-                widthImg={"350px"}
-              />
-            );
-          }) 
-        }
+          console.log(id);
+
+          return (
+            <Card
+              name={name}
+              key={id}
+              id={id}
+              price={price}
+              images={images}
+              widthImg={"350px"}
+            />
+          );
+        })}
       </div>
     </div>
   );
